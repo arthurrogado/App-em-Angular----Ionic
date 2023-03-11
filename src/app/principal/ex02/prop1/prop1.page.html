@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/principal/ex02/inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Proposta 1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label position="floating">Número 1</ion-label>
+    <ion-input placeholder="Digite o n1" [(ngModel)] = "n1"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Número 2</ion-label>
+    <ion-input placeholder="Digite o n2" [(ngModel)] = "n2"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="somar()" expand="block" shape="round">
+    Somar
+  </ion-button>
+
+  <div *ngIf="soma != null">
+    O resultado da soma é {{soma}}.
+  </div>
+
+</ion-content>
